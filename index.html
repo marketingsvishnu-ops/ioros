@@ -118,4 +118,230 @@ h2{font:900 clamp(45px,6vw,75px)/.9 'Barlow Condensed';margin-top:15px}
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .plan{background:white;padding:30px;border-top:5px solid #111}
 .plan.hot{background:#111;color:white;border-color:var(--red);transform:translateY(-10px)}
-.plan small{font-size:10px;letter-spacing:2px;color:var(--red);font-weight:900
+.plan small{font-size:10px;letter-spacing:2px;color:var(--red);font-weight:900}
+.plan h3{font:900 35px 'Barlow Condensed';margin:15px 0}
+.price{font:900 55px 'Barlow Condensed'}
+.price span{font:500 12px 'DM Sans';color:#999}
+.plan ul{list-style:none;margin:25px 0}
+.plan li{font-size:12px;padding:12px 0;border-bottom:1px solid #9993}
+.plan li:before{content:"✦";color:var(--red);margin-right:10px}
+.plan .btn{width:100%;text-align:center}
+.bmi{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.bmi-box{background:white;padding:32px;box-shadow:0 15px 40px #0000000c}
+.field{margin-bottom:18px}
+.field label{font-size:10px;font-weight:900;letter-spacing:1px;display:block;margin-bottom:8px}
+.field input{width:100%;padding:15px;border:1px solid #ddd;background:#fafafa;font:inherit}
+.bmi-box button{width:100%}
+.result{display:none;background:#f4e7e7;padding:18px;margin-top:20px}
+.result strong{font:900 35px 'Barlow Condensed';color:var(--red)}
+footer{
+ background:#101010;color:white;padding:35px 7%;
+ display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap
+}
+footer p{font-size:10px;color:#999}
+@media(max-width:800px){
+ .hero{grid-template-columns:1fr;padding-top:65px}
+ .hero-image{min-height:350px}
+ .story,.bmi{grid-template-columns:1fr}
+ .cards,.plans{grid-template-columns:1fr 1fr}
+ .plan.hot{transform:none}
+}
+@media(max-width:580px){
+ nav{padding:0 5%}
+ .menu{display:block}
+ .links{
+  display:none;position:absolute;top:78px;left:0;width:100%;
+  padding:25px;background:#101010;flex-direction:column
+ }
+ .links.open{display:flex}
+ .navbtn{display:none}
+ .hero{padding:65px 6%}
+ h1{font-size:82px}
+ .hero-image{min-height:300px}
+ section{padding:70px 6%}
+ .cards,.plans{grid-template-columns:1fr}
+ .story-art{min-height:300px}
+ .story-art span{font-size:55px}
+ .points{gap:15px}
+ .bmi-box{padding:22px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+ <a href="#" class="logo">RED<span>LINE.</span></a>
+ <button class="menu" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+ <div class="links" id="links">
+  <a href="#training" onclick="closeMenu()">TRAINING</a>
+  <a href="#story" onclick="closeMenu()">ABOUT</a>
+  <a href="#membership" onclick="closeMenu()">MEMBERSHIP</a>
+  <a href="#calculator" onclick="closeMenu()">BMI</a>
+ </div>
+ <a class="navbtn" href="#membership">JOIN THE CLUB ↗</a>
+</nav>
+
+<header class="hero">
+ <div>
+  <div class="tag">NO EXCUSES. JUST RESULTS.</div>
+  <h1>BUILT TO<br><span>FIGHT.</span><br>READY TO WIN.</h1>
+  <p>Step into a new level of fitness. Train hard, build confidence and discover what you're capable of at REDLINE Fight Club.</p>
+  <a href="#training" class="btn">EXPLORE TRAINING ↗</a>
+ </div>
+ <div class="hero-image">
+  <div class="round"></div>
+  <div class="glove">🥊</div>
+  <div class="image-label">STRENGTH • DISCIPLINE • POWER</div>
+ </div>
+</header>
+
+<div class="strip">BOXING • STRENGTH • CONDITIONING • BOXING • STRENGTH • CONDITIONING</div>
+
+<section id="training">
+ <div class="heading">
+  <small>01 / OUR TRAINING</small>
+  <h2>FIND YOUR FIGHT.</h2>
+  <p>Whether you're a beginner or an experienced athlete, there's a training path waiting for you.</p>
+ </div>
+ <div class="cards">
+  <article class="card">
+   <div class="number">01 / BOXING</div><div class="symbol">🥊</div>
+   <h3>BOXING CLUB</h3>
+   <p>Learn technique, sharpen your skills and build confidence with expert-led boxing sessions.</p>
+  </article>
+  <article class="card">
+   <div class="number">02 / STRENGTH</div><div class="symbol">✦</div>
+   <h3>POWER TRAINING</h3>
+   <p>Build strength and muscle with structured resistance and functional training.</p>
+  </article>
+  <article class="card">
+   <div class="number">03 / CONDITIONING</div><div class="symbol">⚡</div>
+   <h3>FIGHT FIT</h3>
+   <p>Improve stamina, speed and endurance with high-energy conditioning workouts.</p>
+  </article>
+ </div>
+</section>
+
+<section class="story" id="story">
+ <div class="story-art"><span>DISCIPLINE<br>IS POWER.</span></div>
+ <div class="story-copy">
+  <div class="tag">02 / OUR PHILOSOPHY</div>
+  <h2>WE DON'T<br>BUILD EXCUSES.</h2>
+  <p>REDLINE is more than a gym. It's a place to challenge yourself, learn new skills and become stronger every day. Our coaches and community help you keep moving forward.</p>
+  <div class="points">
+   <div class="point"><strong>EXPERT COACHES</strong><small>Guidance at every level</small></div>
+   <div class="point"><strong>REAL COMMUNITY</strong><small>Train together, grow together</small></div>
+   <div class="point"><strong>SMART PROGRAMS</strong><small>Training with purpose</small></div>
+   <div class="point"><strong>YOUR PROGRESS</strong><small>Every step counts</small></div>
+  </div>
+  <a href="#membership" class="btn">BECOME A MEMBER ↗</a>
+ </div>
+</section>
+
+<section class="pricing" id="membership">
+ <div class="heading">
+  <small>03 / MEMBERSHIP PLANS</small>
+  <h2>CHOOSE YOUR LEVEL.</h2>
+  <p>Pick your starting point. Your next chapter begins with one decision.</p>
+ </div>
+ <div class="plans">
+  <article class="plan">
+   <small>STARTER</small><h3>FIGHTER</h3>
+   <div class="price">$35 <span>/ month</span></div>
+   <ul>
+    <li>Gym floor access</li>
+    <li>Basic fitness equipment</li>
+    <li>Locker room access</li>
+    <li>Introductory assessment</li>
+   </ul>
+   <a class="btn" href="mailto:hello@example.com?subject=Fighter%20Membership">SELECT PLAN</a>
+  </article>
+  <article class="plan hot">
+   <small>POPULAR CHOICE</small><h3>CHAMPION</h3>
+   <div class="price">$65 <span>/ month</span></div>
+   <ul>
+    <li>All Fighter benefits</li>
+    <li>Boxing group classes</li>
+    <li>Strength sessions</li>
+    <li>Monthly progress review</li>
+   </ul>
+   <a class="btn" href="mailto:hello@example.com?subject=Champion%20Membership">SELECT PLAN</a>
+  </article>
+  <article class="plan">
+   <small>PREMIUM</small><h3>LEGEND</h3>
+   <div class="price">$95 <span>/ month</span></div>
+   <ul>
+    <li>All Champion benefits</li>
+    <li>Personal coaching session</li>
+    <li>Priority class booking</li>
+    <li>Personal training plan</li>
+   </ul>
+   <a class="btn" href="mailto:hello@example.com?subject=Legend%20Membership">SELECT PLAN</a>
+  </article>
+ </div>
+</section>
+
+<section class="bmi" id="calculator">
+ <div>
+  <div class="tag">04 / FITNESS CHECK</div>
+  <h2>KNOW YOUR<br>NUMBERS.</h2>
+  <p style="color:#777;font-size:13px;line-height:1.9;margin-top:20px">
+   Use our BMI calculator for a quick general screening estimate. BMI is not a diagnosis and does not measure body composition.
+  </p>
+ </div>
+ <div class="bmi-box">
+  <div class="field">
+   <label for="height">HEIGHT (CM)</label>
+   <input id="height" type="number" placeholder="Example: 175" min="50" max="250">
+  </div>
+  <div class="field">
+   <label for="weight">WEIGHT (KG)</label>
+   <input id="weight" type="number" placeholder="Example: 75" min="10" max="500">
+  </div>
+  <button class="btn" onclick="calculateBMI()">CALCULATE BMI ↗</button>
+  <div class="result" id="result" aria-live="polite">
+   <div style="font-size:10px;font-weight:900">YOUR BMI RESULT</div>
+   <strong id="number"></strong>
+   <p id="status" style="font-size:12px;margin-top:5px"></p>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <a href="#" class="logo">RED<span>LINE.</span></a>
+ <p>© 2026 REDLINE FIGHT CLUB. ALL RIGHTS RESERVED.</p>
+ <p>TRAIN HARD. STAY HUMBLE.</p>
+</footer>
+
+<script>
+function toggleMenu(){
+ document.getElementById('links').classList.toggle('open');
+}
+function closeMenu(){
+ document.getElementById('links').classList.remove('open');
+}
+function calculateBMI(){
+ const h=Number(document.getElementById('height').value);
+ const w=Number(document.getElementById('weight').value);
+
+ if(!h||!w||h<50||h>250||w<10||w>500){
+  alert('Please enter a valid height and weight.');
+  return;
+ }
+
+ const bmi=w/((h/100)*(h/100));
+ let status='';
+
+ if(bmi<18.5) status='Below the usual adult BMI range';
+ else if(bmi<25) status='Within the usual adult BMI range';
+ else if(bmi<30) status='Above the usual adult BMI range';
+ else status='In the high adult BMI range';
+
+ document.getElementById('number').textContent=bmi.toFixed(1);
+ document.getElementById('status').textContent=status;
+ document.getElementById('result').style.display='block';
+}
+</script>
+</body>
+</html>
+```
